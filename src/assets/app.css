@@ -1,85 +1,93 @@
-/* Header styles */
-header {
-    display: flex; /* Active Flexbox */
-    align-items: center; /* Centre les éléments verticalement */
-    justify-content: space-between; /* Logo à gauche, navigation au centre, bouton à droite */
-    padding: 1rem 2rem;
-    background-color: #faa6c3;
-    color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
-}
-
-header .logo {
-    width: 100px;
-    height: auto;
-}
-
-header nav {
-    flex: 1; /* Prend l'espace disponible entre le logo et le bouton */
-    display: flex; /* Active Flexbox pour centrer les rubriques */
-    justify-content: center; /* Centre les rubriques horizontalement */
-    gap: 2rem; /* Espace entre les liens */
-}
-
-header nav ul {
-    list-style: none; /* Supprime les puces */
+/* Global Reset */
+body, html {
     margin: 0;
     padding: 0;
-    display: flex; /* Active Flexbox pour les liens */
-    gap: 1.5rem; /* Espace entre les rubriques */
+    box-sizing: border-box;
 }
 
-/* Augmente la taille de la police pour les rubriques */
-header nav ul li a {
+/* Header principal */
+.header {
+    background-color: #ffffff; /* Fond blanc pour le header */
+    padding: 0;
+    width: 100%; /* Prend toute la largeur */
+    border-bottom: 2px solid #f0d9b5;
+}
+
+/* Partie supérieure du header : logo centré */
+.header-top {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 160px; /* Définit une hauteur pour s'adapter à l'image */
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 200px; /* Largeur fixe */
+    height: 200px; /* Hauteur fixe */
+    object-fit: contain; /* Conserve le contenu sans déformation */
+}
+
+/* Icônes sociales à droite */
+.social-icons {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 0.7;
+}
+
+/* Barre de navigation */
+.navigation {
+    height: 50px;
+    background-color: #ffe4e1; /* Fond rose pâle */
+    border-top: 2px solid rgba(12, 12, 12, 0.63); /* Bordure grise en haut */
+    border-bottom: 2px solid rgba(12, 12, 12, 0.63); /* Bordure grise en bas */
+    width: 100%; /* Prend toute la largeur */
+    display: flex; /* Active le modèle flexbox */
+    justify-content: center; /* Centre horizontalement les éléments */
+    align-items: center; /* Centre verticalement les éléments */
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navigation ul li {
+    margin: 0;
+}
+
+.navigation ul li a {
     text-decoration: none;
-    color: #fff;
+    font-size: 16px;
+    color: rgba(12, 12, 12, 0.63); /* Couleur initiale des items */
     font-weight: bold;
-    font-size: 1.25rem; /* Taille de police agrandie */
     transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    color: #000000; /* Change la couleur au survol */
-}
-
-/* Bouton Connexion */
-header .btn-connexion {
-    background-color: #000000;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 25px; /* Bouton arrondi */
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-header .btn-connexion:hover {
-    background-color: #aa073f; /* Change la couleur au survol */
-    transform: scale(1.05); /* Légère augmentation au survol */
-}
-
-/* Structure globale */
-html, body {
-    height: 100%; /* Assure que le HTML et le body occupent 100% de la hauteur */
-    margin: 0; /* Supprime les marges par défaut */
-    display: flex; /* Active Flexbox */
-    flex-direction: column; /* Organise les enfants en colonne */
-}
-
-main {
-    flex: 1; /* Permet à main de prendre tout l'espace disponible */
-}
-
-footer {
-    text-align: center;
-    padding: 6rem;
-    background-color: #faa6c3;
-    color: #f8f6f6;
-    margin-top: auto; /* Place automatiquement le footer en bas */
-}
-
-footer p {
-    margin: 0; /* Supprime les marges par défaut */
+.navigation ul li a:hover {
+    color: #ffffff; /* Change la couleur en blanc au survol */
 }

@@ -1,34 +1,73 @@
-/* Section Hero */
-.hero {
+/* Section avec image de fond */
+.background-section {
+    background-image: url('../assets/background.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    height: 500px; /* Hauteur totale de la section */
+    position: relative; /* Nécessaire pour positionner les rectangles */
+}
+
+/* Grand rectangle transparent */
+.overlay {
+    position: absolute;
+    top: 70px; /* Place le rectangle en haut */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Recentre par rapport à l'axe X */
+    width: 900px; /* Largeur du grand rectangle */
+    height: 180px; /* Hauteur du grand rectangle */
+    background-color: rgba(248, 246, 246, 0.53); /* Couleur avec transparence */
+}
+
+/* Petit rectangle descendant */
+.small-rectangle {
+    position: absolute;
+    top: 100px; /* Décalage vertical sous le grand rectangle */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Recentre par rapport à l'axe X */
+    width: 500px; /* Largeur du petit rectangle */
+    height: 100px; /* Hauteur du grand rectangle */
+    background-color: rgba(248, 246, 246, 0.85); /* Couleur légèrement plus claire */
+    padding: 30px 20px; /* Espacement interne */
+}
+
+
+
+
+/* Style pour le contenu */
+.content h1 {
+    padding-top: 10px;
+    font-size: 36px;
+    margin: 0;
+    color: rgba(51, 51, 51, 0.73);
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #dcb7c4, #f8bbd0);
-    color: white;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.content p {
+    font-size: 18px;
+    margin: 10px 0 0;
+    color: rgba(51, 51, 51, 0.85);
+    text-align: center;
 }
 
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+/* Bouton au centre en bas */
+.cta-button {
+    position: absolute; /* Position absolue par rapport au rectangle */
+    bottom: -20px; /* Place le bouton à 20px du bas */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Recentre parfaitement le bouton */
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #f88eb4; /* Couleur douce */
+    color: #ffffff; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    font-size: 16px; /* Taille du texte */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s; /* Transition pour l'effet hover */
 }
 
-.hero .cta {
-    background-color: #ffd700;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.hero .cta:hover {
-    transform: scale(1.1);
+/* Effet au survol */
+.cta-button:hover {
+    background-color: #f76da0; /* Couleur plus foncée au survol */
 }
 
 /* Section Fonctionnalités */
@@ -65,7 +104,7 @@
 .testimonials {
     text-align: center;
     padding: 50px 20px;
-    background: #f3e5f5;
+    background: #fad8e3;
 }
 
 .testimonial {
@@ -93,7 +132,7 @@
 .contact {
     text-align: center;
     padding: 100px 20px;
-    background-color: #ac9099;
+    background-color: #fbc4d7;
     color: white;
 }
 
@@ -108,9 +147,9 @@
 }
 
 .contact .cta {
-    background-color: #ffd700;
-    color: #333;
-    border: none;
+    background-color: #f498b8;
+    color: #000000;
+    border: 2px solid #000000; /* Couleur rose pastel */
     padding: 10px 20px;
     border-radius: 25px;
     font-size: 1.2rem;
