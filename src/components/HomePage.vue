@@ -38,28 +38,45 @@
   </section>
 
 
-
-  <!-- Section Témoignages -->
-  <section class="testimonials">
-    <h2>Ce que disent nos utilisateurs</h2>
-    <div class="testimonial">
-      <img src="" alt="Utilisateur 1" />
-      <p>“Ce journal m’a aidé à organiser mes pensées et à atteindre mes objectifs. Merci !”</p>
-      <h4>- Alice D.</h4>
-    </div>
-    <div class="testimonial">
-      <img src="" alt="Utilisateur 2" />
-      <p>“Une interface simple et efficace qui m’accompagne tous les jours.”</p>
-      <h4>- Jean M.</h4>
+  <!-- Section Présentation -->
+  <section class="about-confidelle">
+    <h2>Confidelle : Votre Partenaire pour Organiser vos Pensées</h2>
+    <p class="intro">
+      Confidelle est bien plus qu’un journal de bord. C’est un espace intime conçu pour vous aider à structurer vos pensées, exprimer vos émotions et atteindre vos objectifs. Avec des outils simples et intuitifs, Confidelle vous accompagne au quotidien pour explorer vos idées et transformer vos rêves en réalité.
+    </p>
+    <div class="features-container">
+      <div class="feature">
+        <h3>🌟 Explorez vos pensées</h3>
+        <p>
+          Écrivez en toute liberté. Confidelle est un espace où chaque mot compte, sans jugement ni contrainte.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>📊 Suivez vos progrès</h3>
+        <p>
+          Gardez un œil sur vos accomplissements grâce à des outils de suivi personnalisés pour rester motivé.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>🔒 Un espace sécurisé</h3>
+        <p>
+          Vos confidences restent privées. Confidelle garantit la confidentialité de vos écrits avec des technologies de pointe.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Section Contact -->
   <section class="contact">
-    <h2>Rejoignez-nous dès aujourd’hui</h2>
-    <p>Créez votre journal personnel et commencez à explorer vos possibilités.</p>
-    <button class="cta">Inscrivez-vous maintenant</button>
+    <div class="contact-content">
+      <h2>Prêt à transformer vos pensées avec Confidelle ?</h2>
+      <p>
+        Commencez votre voyage vers un esprit plus clair et organisé. Rejoignez-nous aujourd’hui et découvrez un espace conçu pour vos idées, vos rêves et vos confidences.
+      </p>
+      <button class="cta">Créer mon compte</button>
+    </div>
   </section>
+
 </template>
 
 

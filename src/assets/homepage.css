@@ -109,64 +109,97 @@
     background-position: center; /* Centre l'image */
 }
 
-
-/* Section Témoignages */
-.testimonials {
+/* Section Présentation */
+.about-confidelle {
+    background-color: #f9f9f9; /* Couleur douce pour le fond */
+    padding: 40px 20px;
     text-align: center;
-    padding: 50px 20px;
-    background: #fad8e3;
 }
 
-.testimonial {
+.about-confidelle h2 {
+    font-size: 32px;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.testimonial img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.about-confidelle .intro {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap; /* Pour une mise en page responsive */
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.feature h3 {
+    font-size: 20px;
+    color: #333;
     margin-bottom: 10px;
 }
 
-.testimonial p {
-    font-style: italic;
-    color: #555;
-}
-
-.testimonial h4 {
-    margin-top: 5px;
-    color: #333;
+.feature p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
 }
 
 /* Section Contact */
 .contact {
+    background-color: #fde3ec; /* Couleur de fond claire et moderne */
     text-align: center;
-    padding: 100px 20px;
-    background-color: #fbc4d7;
-    color: white;
+    padding: 60px 20px; /* Espacement généreux pour un design aéré */
+}
+
+.contact-content {
+    max-width: 600px; /* Limiter la largeur du contenu pour un meilleur focus */
+    margin: 0 auto; /* Centrer le contenu */
 }
 
 .contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 28px;
+    color: #0c0c0c;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
 }
 
 .contact p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
 }
 
-.contact .cta {
-    background-color: #f498b8;
-    color: #000000;
-    border: 2px solid #000000; /* Couleur rose pastel */
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 1.2rem;
+.cta {
+    background-color: #ba3361; /* Couleur vive pour attirer l’attention */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 25px; /* Boutons arrondis pour un aspect moderne */
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.contact .cta:hover {
-    transform: scale(1.1);
+.cta:hover {
+    background-color: #aa073f; /* Couleur légèrement plus foncée au survol */
 }
