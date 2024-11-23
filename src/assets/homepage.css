@@ -1,6 +1,7 @@
 /* Section avec image de fond */
 .background-section {
-    background-image: url('../assets/background.jpg'); /* Remplacez par le chemin de votre image */
+    /*background-color: #d8d5d5;
+    /*background-image: url('../assets/background.jpg'); /* Remplacez par le chemin de votre image */
     background-size: cover; /* L'image couvre toute la section */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
@@ -26,7 +27,7 @@
     left: 50%; /* Centre horizontalement */
     transform: translateX(-50%); /* Recentre par rapport à l'axe X */
     width: 500px; /* Largeur du petit rectangle */
-    height: 100px; /* Hauteur du grand rectangle */
+    height: 150px; /* Hauteur du grand rectangle */
     background-color: rgba(248, 246, 246, 0.85); /* Couleur légèrement plus claire */
     padding: 30px 20px; /* Espacement interne */
 }
@@ -41,6 +42,8 @@
     margin: 0;
     color: rgba(51, 51, 51, 0.73);
     text-align: center;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
 }
 
 .content p {
@@ -48,6 +51,8 @@
     margin: 10px 0 0;
     color: rgba(51, 51, 51, 0.85);
     text-align: center;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
 }
 
 /* Bouton au centre en bas */
@@ -72,33 +77,38 @@
 
 /* Section Fonctionnalités */
 .features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+    display: flex; /* Aligner les deux parties côte à côte */
+    height: 100vh; /* Ajuster la hauteur en fonction de vos besoins */
+    overflow: hidden; /* Empêche le débordement */
+    border-top: 4px solid rgb(248, 246, 246); /* Bordure grise en haut */
 }
 
-.feature {
-    text-align: center;
-    max-width: 300px;
+.features-left {
+    flex: 1; /* La partie gauche prend 50% de l'espace */
+    position: relative; /* Nécessaire pour positionner la vidéo correctement */
 }
 
-.feature img {
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    height: 100%;
+    object-fit: cover; /* Ajuste la vidéo pour couvrir tout l'espace */
+    z-index: -1; /* Place la vidéo derrière tout autre contenu (si nécessaire) */
 }
 
-.feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+.features-right {
+    flex: 1; /* La partie droite prend 50% de l'espace */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligne le texte verticalement */
+    padding: 20px; /* Ajouter un espace autour du texte */
+    background-image: url('features-right.jpg'); /* Chemin vers votre image */
+    background-size: cover; /* L'image couvre tout l'espace */
+    background-position: center; /* Centre l'image */
 }
 
-.feature p {
-    font-size: 1rem;
-    color: #666;
-}
 
 /* Section Témoignages */
 .testimonials {

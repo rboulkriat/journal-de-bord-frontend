@@ -4,13 +4,19 @@
 
 <template>
   <section class="background-section">
-    <!-- Grand rectangle vers le haut -->
+    <!-- Vidéo en arrière-plan -->
+    <video autoplay muted loop class="background-video">
+      <source src="../assets/fond1.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+
+    <!-- Grand rectangle vers le haut avec contenu -->
     <div class="overlay">
       <!-- Petit rectangle descendant au centre avec texte -->
       <div class="small-rectangle">
         <div class="content">
-          <h1>Bienvenue dans Mon Journal</h1>
-          <p>Explorez vos pensées, vos rêves et vos idées.</p>
+          <h1>Confidelle, le sanctuaire de vos pensées</h1>
+          <p>Laissez vos mots s’épanouir dans un écrin de sérénité, là où vos confidences deviennent des trésors préservés.</p>
           <!-- Bouton au centre en bas -->
           <button class="cta-button">Commencer</button>
         </div>
@@ -18,24 +24,20 @@
     </div>
   </section>
 
+
   <!-- Section Fonctionnalités -->
   <section class="features">
-    <div class="feature">
-      <img src="../assets/mood.webp" alt="Suivi d'humeur" />
-      <h3>Suivi de l’humeur</h3>
-      <p>Notez comment vous vous sentez chaque jour et suivez vos émotions au fil du temps.</p>
+    <div class="features-left">
+      <video autoplay muted loop class="background-video">
+        <source src="../assets/video.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+      </video>
     </div>
-    <div class="feature">
-      <img src="../assets/goals.webp" alt="Objectifs personnels" />
-      <h3>Objectifs personnels</h3>
-      <p>Définissez vos objectifs et suivez vos progrès avec des outils intuitifs.</p>
-    </div>
-    <div class="feature">
-      <img src="../assets/journal.webp" alt="Réflexions quotidiennes" />
-      <h3>Réflexions quotidiennes</h3>
-      <p>Exprimez vos pensées, vos idées et vos inspirations chaque jour.</p>
+    <div class="features-right">
     </div>
   </section>
+
+
 
   <!-- Section Témoignages -->
   <section class="testimonials">

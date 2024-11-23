@@ -1,5 +1,7 @@
 <script setup>
 import HomePage from './components/HomePage.vue';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 </script>
 
 <template>
@@ -7,7 +9,7 @@ import HomePage from './components/HomePage.vue';
     <!-- Logo centré -->
     <div class="header-top">
       <div class="logo-container">
-        <img alt="Logo" class="logo" src="./assets/logo/logo.png" />
+        <img alt="Logo" class="logo" src="./assets/logo.png" />
       </div>
 
       <!-- Icônes à droite -->
@@ -39,9 +41,20 @@ import HomePage from './components/HomePage.vue';
     <HomePage />
   </main>
 
-  <footer>
-    <p>&copy; 2024 Mon Journal de Bord. Tous droits réservés.</p>
+  <footer class="footer">
+    <div class="footer-logo">Confidelle</div>
+    <div class="footer-links">
+      <a href="">À propos</a>
+      <a href="">Services</a>
+      <a href="">Contact</a>
+      <a href="">Politique de confidentialité</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
   </footer>
+
 </template>
 
 <!-- Import CSS -->

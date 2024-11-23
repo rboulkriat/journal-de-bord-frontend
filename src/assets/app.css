@@ -91,3 +91,55 @@ body, html {
 .navigation ul li a:hover {
     color: #ffffff; /* Change la couleur en blanc au survol */
 }
+.footer {
+    background-color: #333333; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    text-align: center; /* Centrer tout le contenu */
+    padding: 20px; /* Espacement interne */
+    font-family: Arial, sans-serif; /* Police moderne */
+}
+
+.footer .footer-logo {
+    font-size: 30px; /* Taille du logo ou du nom */
+    font-weight: normal; /* Poids de la police plus léger pour un effet doux */
+    font-style: italic; /* Mettre le texte en italique */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+    margin-bottom: 20px; /* Espacement sous le nom */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+
+.footer .footer-links {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    gap: 10px; /* Espacement entre les liens */
+    margin-bottom: 20px; /* Espacement sous les liens */
+}
+
+.footer .footer-links a {
+    color: #ffffff; /* Couleur des liens */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 14px; /* Taille de la police des liens */
+    transition: color 0.3s ease; /* Animation au survol */
+}
+
+.footer .footer-links a:hover {
+    color: #aa073f; /* Couleur au survol */
+}
+
+.footer .footer-socials {
+    display: flex;
+    justify-content: center; /* Centre les icônes */
+    gap: 20px; /* Espacement entre les icônes */
+}
+
+.footer .footer-socials a {
+    color: #ffffff; /* Couleur des icônes */
+    font-size: 20px; /* Taille des icônes */
+    transition: color 0.3s ease; /* Animation au survol */
+}
+
+.footer .footer-socials a:hover {
+    color: #aa073f; /* Couleur au survol */
+}
+
