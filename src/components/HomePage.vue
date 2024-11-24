@@ -1,4 +1,11 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goToLogin = () => {
+  router.push('/connexion');
+};
 </script>
 
 
@@ -18,7 +25,7 @@
           <h1>Confidelle, le sanctuaire de vos pensées</h1>
           <p>Laissez vos mots s’épanouir dans un écrin de sérénité, là où vos confidences deviennent des trésors préservés.</p>
           <!-- Bouton au centre en bas -->
-          <button class="cta-button">Commencer</button>
+          <button class="cta-button" @click="goToLogin">Commencer</button>
         </div>
       </div>
     </div>
@@ -73,7 +80,7 @@
       <p>
         Commencez votre voyage vers un esprit plus clair et organisé. Rejoignez-nous aujourd’hui et découvrez un espace conçu pour vos idées, vos rêves et vos confidences.
       </p>
-      <button class="cta">Créer mon compte</button>
+      <button class="cta" @click="goToLogin">Créer mon compte</button>
     </div>
   </section>
 

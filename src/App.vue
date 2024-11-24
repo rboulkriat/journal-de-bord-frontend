@@ -1,7 +1,5 @@
 <script setup>
-import HomePage from './components/HomePage.vue';
 import '@fortawesome/fontawesome-free/css/all.css';
-
 </script>
 
 <template>
@@ -29,32 +27,32 @@ import '@fortawesome/fontawesome-free/css/all.css';
     <!-- Barre de navigation -->
     <nav class="navigation">
       <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/about">ABOUT</a></li>
-        <li><a href="/contact">CONTACT</a></li>
+        <li><router-link to="/">HOME</router-link></li>
+        <li><router-link to="/about">ABOUT</router-link></li>
+        <li><router-link to="/contact">CONTACT</router-link></li>
       </ul>
     </nav>
   </header>
 
   <!-- Contenu principal (body) -->
   <main>
-    <HomePage />
+    <!-- Remplace HomePage par router-view pour rendre les pages dynamiques -->
+    <router-view />
   </main>
 
   <footer class="footer">
     <div class="footer-logo">Confidelle</div>
     <div class="footer-links">
-      <a href="">À propos</a>
-      <a href="">Services</a>
-      <a href="">Contact</a>
-      <a href="">Politique de confidentialité</a>
+      <router-link to="/">À propos</router-link>
+      <router-link to="/services">Services</router-link>
+      <router-link to="/contact">Contact</router-link>
+      <router-link to="/privacy">Politique de confidentialité</router-link>
     </div>
     <div class="footer-socials">
       <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
-
 </template>
 
 <!-- Import CSS -->

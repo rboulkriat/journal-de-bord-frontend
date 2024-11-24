@@ -1,0 +1,92 @@
+/* Conteneur principal */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../assets/bk2.jpg'); /* Image de fond */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+/* Carte de connexion */
+.login-card {
+    background: rgba(243, 165, 192, 0.34); /* Fond transparent */
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(170, 7, 63, 0.69); /* Ombre subtile */
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Titre */
+.login-card h1 {
+    font-size: 24px;
+    color: #d5064e; /* Texte rouge */
+    margin-bottom: 20px;
+}
+
+/* Champs de formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d5064e; /* Bordure rouge clair */
+    background: #ffffff; /* Fond blanc par défaut */
+    color: #000000; /* Texte noir */
+    outline: none;
+    border-radius: 5px; /* Coins arrondis */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #999999; /* Placeholder en gris */
+}
+
+.form-group input:focus {
+    border-color: #d5064e; /* Bordure rouge vif au focus */
+    box-shadow: 0 0 5px rgba(213, 6, 78, 0.5); /* Lueur subtile rouge */
+    background: #ffffff; /* Fond blanc au focus */
+}
+
+/* Bouton de connexion */
+.btn-login {
+    background-color: #e14279; /* Couleur rose vif */
+    color: #f8f6f6;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: #aa073f; /* Couleur plus foncée au survol */
+    transform: scale(1.02); /* Agrandissement léger */
+}
+
+/* Lien d'inscription */
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.register-link a {
+    color: #d5064e; /* Couleur rouge vif */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

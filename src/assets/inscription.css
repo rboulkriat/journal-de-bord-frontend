@@ -1,0 +1,103 @@
+/* Conteneur principal */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../assets/bk2.jpg'); /* Utilisation du même fond */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+/* Carte d'inscription */
+.register-card {
+    background: rgba(243, 165, 192, 0.34); /* Fond transparent similaire à la connexion */
+    padding: 30px;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(170, 7, 63, 0.69); /* Ombre subtile */
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Titre */
+.register-card h1 {
+    font-size: 24px;
+    color: #d5064e; /* Même couleur pour le titre */
+    margin-bottom: 20px;
+}
+
+/* Champs de formulaire */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Aligne les étiquettes à gauche */
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #d5064e; /* Couleur des étiquettes */
+    font-weight: normal; /* Texte non gras */
+    margin-bottom: 5px; /* Ajoute un espacement sous l'étiquette */
+}
+
+.form-group input {
+    width: 100%; /* Assure que les champs occupent toute la largeur */
+    padding: 12px; /* Même padding que le bouton */
+    font-size: 16px; /* Même taille de texte que le bouton */
+    border: 1px solid #d5064e; /* Bordure rouge clair */
+    background: #ffffff; /* Fond blanc */
+    color: #000000; /* Texte noir */
+    outline: none;
+    border-radius: 5px; /* Coins arrondis */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Inclut la bordure dans la largeur totale */
+}
+
+.form-group input::placeholder {
+    color: #999999; /* Placeholder en gris clair */
+}
+
+.form-group input:focus {
+    border-color: #aa073f; /* Bordure rouge au focus */
+    box-shadow: 0 0 5px rgba(170, 7, 63, 0.5); /* Lueur subtile rouge */
+    background: #ffffff; /* Maintient le fond blanc au focus */
+}
+
+/* Bouton d'inscription */
+.btn-register {
+    background-color: #e14279; /* Couleur similaire à celle de la connexion */
+    color: #f8f6f6;
+    padding: 12px; /* Même padding que les champs */
+    font-size: 16px; /* Même taille de texte que les champs */
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;
+    width: 100%; /* Assure que le bouton occupe toute la largeur */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box; /* Inclut les bordures et padding dans la largeur totale */
+}
+
+.btn-register:hover {
+    background-color: #aa073f; /* Couleur plus foncée au survol */
+    transform: scale(1.02); /* Agrandissement léger */
+}
+
+/* Lien vers connexion */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.login-link a {
+    color: #d5064e; /* Lien en rouge similaire à l'inscription */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

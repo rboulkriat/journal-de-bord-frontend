@@ -92,8 +92,9 @@ body, html {
     color: #ffffff; /* Change la couleur en blanc au survol */
 }
 .footer {
-    background-color: #333333; /* Couleur de fond */
-    color: #ffffff; /* Couleur du texte */
+    border-top: 2px solid rgba(12, 12, 12, 0.66); /* Bordure grise en haut */
+    background-color: #faadc7; /* Couleur de fond */
+    color: #000000; /* Couleur du texte */
     text-align: center; /* Centrer tout le contenu */
     padding: 20px; /* Espacement interne */
     font-family: Arial, sans-serif; /* Police moderne */
@@ -117,7 +118,7 @@ body, html {
 }
 
 .footer .footer-links a {
-    color: #ffffff; /* Couleur des liens */
+    color: rgba(12, 12, 12, 0.81); /* Couleur des liens */
     text-decoration: none; /* Supprime le soulignement */
     font-size: 14px; /* Taille de la police des liens */
     transition: color 0.3s ease; /* Animation au survol */
@@ -134,7 +135,7 @@ body, html {
 }
 
 .footer .footer-socials a {
-    color: #ffffff; /* Couleur des icônes */
+    color: rgba(12, 12, 12, 0.84); /* Couleur des icônes */
     font-size: 20px; /* Taille des icônes */
     transition: color 0.3s ease; /* Animation au survol */
 }
