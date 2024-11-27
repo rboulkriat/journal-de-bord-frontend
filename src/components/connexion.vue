@@ -1,6 +1,16 @@
 <script setup>
 import { ref } from 'vue';
-import axios from 'axios'; // Si tu utilises axios
+import { connexionService } from '../services/connexion'; // Import du service
+
+// Simuler l'état de connexion
+const isAuthenticated = ref(false); // Modifier à `true` si l'utilisateur est connecté
+const userName = ref(""); // Nom de l'utilisateur connecté
+
+// Exemple : Vérifier si l'utilisateur est déjà connecté
+if (localStorage.getItem("isAuthenticated") === "true") {
+  isAuthenticated.value = true;
+  userName.value = localStorage.getItem("userName"); // Charger le nom stocké
+}
 
 // Champs du formulaire
 const email = ref('');
@@ -8,41 +18,34 @@ const password = ref('');
 const message = ref(''); // Message de succès ou d'erreur
 
 // Fonction pour gérer la soumission du formulaire
-const handleLogin = async (e) => {
-  e.preventDefault(); // Empêche le rechargement de la page
+const handleLogin = (e) => {
+  e.preventDefault();
 
-  try {
-    // Appel à l'API de connexion
-    const response = await axios.post('http://localhost:3000/connexion', {
-      email: email.value,
-      password: password.value,
-    }, {
-      headers: {
-        'Content-Type': 'application/json', // S'assure que le type de contenu est JSON
-      },
-    });
+  // Appeler la méthode login
+  const result = connexionService.login(email.value, password.value);
 
+  if (result.success) {
+    message.value = result.message;
+    isAuthenticated.value = true;
+    userName.value = result.message.split(", ")[1].replace("!", "");
 
-    // Vérification de la réponse
-    if (response.data.success) {
-      message.value = 'Connexion réussie !';
-      // Stocke le token si nécessaire
-      localStorage.setItem('token', response.data.token);
-      // Redirige l'utilisateur ou fais autre chose
-      window.location.href = '/dashboard';
-    } else {
-      message.value = response.data.message; // Affiche le message d'erreur
-    }
-  } catch (error) {
-    console.error(error);
-    message.value = 'Une erreur est survenue lors de la connexion.';
+    // Stocker l'état de connexion dans localStorage
+    localStorage.setItem("isAuthenticated", "true");
+    localStorage.setItem("userName", userName.value);
+
+    // Rediriger après une courte pause
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 1000);
+  } else {
+    message.value = result.message;
   }
 };
 </script>
 
 <template>
   <div class="login-container">
-    <div class="login-card">
+    <div class="login-card" v-if="!isAuthenticated">
       <h1>Bienvenue 🌸</h1>
       <p>Connectez-vous pour retrouver votre univers Confidelle</p>
 
@@ -78,11 +81,19 @@ const handleLogin = async (e) => {
 
       <!-- Lien vers inscription -->
       <p class="register-link">
-        Pas encore membre ? <a href="/inscription">Inscrivez-vous ici</a>
+        Pas encore membre ?
+        <router-link to="/inscription">Inscrivez-vous ici</router-link>
       </p>
+    </div>
+
+    <div class="already-logged-in" v-else>
+      <h1>Vous êtes déjà connecté</h1>
+      <p>Bonjour, {{ userName }} !</p>
+      <router-link to="/">Retourner à l'accueil</router-link>
     </div>
   </div>
 </template>
+
 
 
 <style src="../assets/connexion.css"></style>
