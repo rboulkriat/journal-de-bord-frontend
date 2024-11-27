@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../components/HomePage.vue';
 import Connexion from '../components/connexion.vue';
 import Inscription from '../components/inscription.vue';
+import Journal from '../components/journal.vue';
 
 const routes = [
     {
@@ -18,6 +19,11 @@ const routes = [
         path: '/inscription',
         name: 'Inscription',
         component: Inscription,
+    },
+    {
+        path: '/journal',
+        name: 'Journal',
+        component: Journal,
     },
 ];
 
