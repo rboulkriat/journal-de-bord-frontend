@@ -34,7 +34,7 @@ const routes = [
         component: Dashboard,
     },
     {
-        path: '/journal',
+        path: '/files',
         name: 'Journal',
         component: Journal,
     },
