@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../components/HomePage.vue';
 import Connexion from '../components/connexion.vue';
 import Inscription from '../components/inscription.vue';
+import About from '../components/aPropos.vue';
+import Dashboard from '../components/Dashboard.vue';
 
 const routes = [
     {
@@ -19,6 +21,17 @@ const routes = [
         name: 'Inscription',
         component: Inscription,
     },
+    {
+        path: '/about',
+        name: 'About',
+        component: About,
+    },
+    {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: Dashboard,
+    },
+
 ];
 
 

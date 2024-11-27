@@ -43,7 +43,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
   <footer class="footer">
     <div class="footer-logo">Confidelle</div>
     <div class="footer-links">
-      <router-link to="/">À propos</router-link>
+      <router-link to="/about">À propos</router-link>
       <router-link to="/services">Services</router-link>
       <router-link to="/contact">Contact</router-link>
       <router-link to="/privacy">Politique de confidentialité</router-link>

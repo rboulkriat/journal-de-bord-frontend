@@ -17,7 +17,7 @@
     transform: translateX(-50%); /* Recentre par rapport à l'axe X */
     width: 900px; /* Largeur du grand rectangle */
     height: 180px; /* Hauteur du grand rectangle */
-    background-color: rgba(248, 246, 246, 0.53); /* Couleur avec transparence */
+    background-color: rgba(250, 178, 202, 0.56); /* Couleur avec transparence */
 }
 
 /* Petit rectangle descendant */
@@ -28,7 +28,7 @@
     transform: translateX(-50%); /* Recentre par rapport à l'axe X */
     width: 500px; /* Largeur du petit rectangle */
     height: 150px; /* Hauteur du grand rectangle */
-    background-color: rgba(248, 246, 246, 0.85); /* Couleur légèrement plus claire */
+    background-color: rgba(248, 246, 246, 0.73); /* Couleur légèrement plus claire */
     padding: 30px 20px; /* Espacement interne */
 }
 
@@ -118,7 +118,7 @@
 
 .about-confidelle h2 {
     font-size: 32px;
-    color: #333;
+    color: #c66184;
     margin-bottom: 20px;
 }
 
@@ -141,16 +141,16 @@
 
 .feature {
     background-color: #ffffff;
-    border: 1px solid #ddd;
+    border: 1px solid #f675a1;
     border-radius: 10px;
     padding: 20px;
     width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    box-shadow: 0 4px 8px rgba(248, 133, 172, 0.79); /* Ombre douce */
 }
 
 .feature h3 {
     font-size: 20px;
-    color: #333;
+    color: #c66184;
     margin-bottom: 10px;
 }
 
