@@ -50,7 +50,7 @@ const logout = () => {
             <i class="fas fa-user"></i>
           </button>
           <ul class="dropdown-menu">
-            <li><router-link to="/profile">Mon profil</router-link></li>
+            <li><router-link to="/Dashboard">Mon profil</router-link></li>
             <li><router-link to="/settings">Paramètres</router-link></li>
             <li><button @click="logout">Se déconnecter</button></li>
           </ul>
