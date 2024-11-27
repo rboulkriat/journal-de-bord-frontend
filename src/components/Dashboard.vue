@@ -1,131 +1,133 @@
 <template>
-  <div class="dashboard-container">
-    <h1>Bienvenue dans votre Journal de Bord</h1>
-
-    <!-- Section pour créer un nouveau fichier -->
-    <div class="create-file">
-      <h2>Créer un nouveau fichier</h2>
-      <form @submit.prevent="handleCreateFile">
-        <input
-            type="text"
-            v-model="newFileName"
-            placeholder="Nom du fichier"
-            required
-        />
-        <button type="submit">Créer</button>
-      </form>
-    </div>
-
-    <!-- Liste des fichiers -->
-    <div class="file-list">
-      <h2>Vos fichiers</h2>
+  <div class="dashboard">
+    <!-- Barre latérale -->
+    <aside class="sidebar">
+      <h2>Menu</h2>
       <ul>
-        <li v-for="file in files" :key="file.id">
-          <span @click="openFile(file.id)">{{ file.name }}</span>
-          <button @click="deleteFile(file.id)">Supprimer</button>
-        </li>
+        <li><router-link to="/overview">Vue d'ensemble</router-link></li>
+        <li><router-link to="/files">Mes fichiers</router-link></li>
+        <li><router-link to="/settings">Paramètres</router-link></li>
+        <li><button @click="logout">Déconnexion</button></li>
       </ul>
+    </aside>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+      <!-- En-tête -->
+      <header class="dashboard-header">
+        <h1>Bienvenue, {{ userName }}</h1>
+        <p>Voici votre tableau de bord</p>
+      </header>
+
+      <!-- Section principale -->
+      <section class="dashboard-body">
+        <router-view />
+      </section>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import { ref } from 'vue';
 
-// Liste des fichiers
-const files = ref([]);
-const newFileName = ref('');
+// Nom de l'utilisateur connecté
+const userName = ref(localStorage.getItem("userName") || "Utilisateur");
 
-// Fonction pour récupérer les fichiers
-const fetchFiles = async () => {
-  try {
-    const response = await axios.get('http://localhost:3000/files', {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`, // Token pour authentification
-      },
-    });
-    files.value = response.data;
-  } catch (error) {
-    console.error('Erreur lors de la récupération des fichiers :', error);
-  }
+// Fonction de déconnexion
+const logout = () => {
+  localStorage.removeItem("isAuthenticated");
+  localStorage.removeItem("userName");
+  window.location.href = "/connexion";
 };
-
-// Fonction pour créer un nouveau fichier
-const handleCreateFile = async () => {
-  try {
-    const response = await axios.post(
-        'http://localhost:3000/files',
-        { name: newFileName.value },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
-          },
-        }
-    );
-    files.value.push(response.data);
-    newFileName.value = ''; // Réinitialiser le champ de saisie
-  } catch (error) {
-    console.error('Erreur lors de la création du fichier :', error);
-  }
-};
-
-// Fonction pour supprimer un fichier
-const deleteFile = async (fileId) => {
-  try {
-    await axios.delete(`http://localhost:3000/files/${fileId}`, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
-    });
-    files.value = files.value.filter((file) => file.id !== fileId);
-  } catch (error) {
-    console.error('Erreur lors de la suppression du fichier :', error);
-  }
-};
-
-// Fonction pour ouvrir un fichier (redirige vers une page spécifique)
-const openFile = (fileId) => {
-  window.location.href = `/file/${fileId}`;
-};
-
-// Récupérer les fichiers au chargement de la page
-onMounted(fetchFiles);
 </script>
 
 <style scoped>
-.dashboard-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+/* Global reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.create-file {
+/* Layout principal */
+.dashboard {
+  display: flex;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  overflow: hidden;
+}
+
+/* Barre latérale */
+.sidebar {
+  background-color: #f4f4f4;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  color: #333;
   margin-bottom: 20px;
 }
 
-.file-list ul {
-  list-style-type: none;
+.sidebar ul {
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.file-list li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.sidebar ul li {
+  margin-bottom: 15px;
 }
 
-.file-list li span {
-  cursor: pointer;
-  text-decoration: underline;
-  color: blue;
-}
-
-.file-list li button {
-  background-color: red;
-  color: white;
+.sidebar ul li a, .sidebar ul li button {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  background: none;
   border: none;
-  padding: 5px 10px;
   cursor: pointer;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover, .sidebar ul li button:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Contenu principal */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* En-tête */
+.dashboard-header {
+  background-color: #f1a5bf;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.dashboard-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* Section principale */
+.dashboard-body {
+  padding: 20px;
 }
 </style>
