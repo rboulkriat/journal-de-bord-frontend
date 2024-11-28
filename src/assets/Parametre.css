@@ -40,22 +40,28 @@
   .modal-content button:hover {
     background-color: #ff3385;
   }
-  
-  .section-settings {
-    background-image: url("../assets/bk4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  
-  .settings-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 70px;
-    background-color: rgba(248, 246, 246, 0.563);
-    border-radius: 10px;
-  }
-  
+
+.section-settings {
+  background-image: url("../assets/bk4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.settings-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 60px;
+  background-color: rgba(248, 246, 246, 0.56);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
   h2 {
     text-align: center;
     color: #d5064e;
