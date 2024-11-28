@@ -27,6 +27,7 @@ const routes = [
         name: 'Journal',
         component: Journal,
     },
+    {
         path: '/about',
         name: 'About',
         component: About,

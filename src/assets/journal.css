@@ -1,0 +1,93 @@
+/* Design du journal */
+#app {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  background-color: #f4f1ea;
+  padding: 20px;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border-radius: 7px;
+  color: #8b4513;
+  border-color: palevioletred;
+}
+.message{
+    height:100px;
+
+}
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 5px;
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a0522d;
+}
+
+.book {
+  width: 60%;
+  margin: 20px auto;
+  background: linear-gradient(145deg, #e0d8d0, #ffffff);
+  padding: 40px;
+  border: 5px solid #c3b091;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page {
+  background-color: #fff8dc;
+  border: 1px solid #c3b091;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Courier New', monospace;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  word-wrap: break-word;
+  color:palevioletred;
+  font-weight:;
+
+}
+
+li {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #fdf5e6;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+  color: #8b4513;
+}
+
+
+
+
+
+
+h1{
+    color:#8b4513;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+h3{
+    color:#8b4513;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
