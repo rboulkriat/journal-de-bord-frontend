@@ -7,6 +7,8 @@ import About from '../components/aPropos.vue';
 import Dashboard from '../components/Dashboard.vue';
 import Parametre from '../components/Parametre.vue';
 import Contact from '@/components/Contact.vue';
+import politiqueConfidentialite from '@/components/politiqueConfidentialite.vue';
+import PolitiqueConfidentialite from '@/components/politiqueConfidentialite.vue';
 
 
 const routes = [
@@ -50,7 +52,11 @@ const routes = [
         name: 'Contact',
         component: Contact,
     },
-
+    {
+        path: '/privacy',
+        name:'privacy',
+        component: PolitiqueConfidentialite,
+    },
     
 ];
 
@@ -61,3 +67,4 @@ const router = createRouter({
 });
 
 export default router;
+
