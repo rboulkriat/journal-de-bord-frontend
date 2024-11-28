@@ -8,26 +8,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: #f8d6e7;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     width: 300px;
-  }
-  
-  .modal-content input {
+}
+
+.modal-content input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ff66b2;
     border-radius: 5px;
     box-sizing: border-box;
-  }
-  
-  .modal-content button {
+}
+
+.modal-content button {
     padding: 10px;
     margin: 5px;
     background-color: #ff66b2;
@@ -35,72 +35,89 @@
     color: white;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  .modal-content button:hover {
+}
+
+.modal-content button:hover {
     background-color: #ff3385;
-  }
+}
 
 .section-settings {
-  background-image: url("../assets/bk4.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: url("../assets/bk4bis.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-bottom: 200px;
+    padding-top: 20px;
 }
-
 
 .settings-container {
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 60px;
-  background-color: rgba(248, 246, 246, 0.56);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 70px;
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, 0.563);
+    border-radius: 20px;
 }
 
-  h2 {
+.section-settings h2 {
     text-align: center;
     color: #d5064e;
+    margin-bottom: 60px;
+}
+
+.form-group {
     margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
+}
+
+.section-settings label {
     display: block;
     margin-bottom: 5px;
-  }
-  
-  input, span {
+}
+
+.section-settings input,
+span {
     display: block;
     margin-bottom: 10px;
-  }
-  
-  button {
+}
+
+.section-settings button{
     padding: 10px 15px;
     border: none;
     background-color: #ffe4e1;
-    color: rgb(227, 120, 120);
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
+
+}
+.settings-button {
+    color: rgb(227, 120, 120);
+
+}
+
+.settings-button button:hover {
     background-color: #f3cac6;
-  }
-  
-  p {
+}
+
+.section-settings p {
     text-align: center;
     color: rgba(51, 51, 51, 0.85);
-  }
-  .delete-account-btn{
+}
+
+#delete-account-btn {
     background-color: #ff3385;
-    color: rgba(244, 228, 228, 0.85);
-  
+    color: rgba(255, 255, 255, 0.85);
+
+}
+.icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    vertical-align: middle;
   }
+  
+.button-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+
+}
