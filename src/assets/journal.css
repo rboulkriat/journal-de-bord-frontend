@@ -9,15 +9,16 @@
 input {
   margin: 10px 0;
   padding: 10px;
-  width: 300px;
   font-size: 16px;
+  width: 100%;
   border-radius: 7px;
   color: #8b4513;
   border-color: palevioletred;
+  text-align:left;
 }
 .message{
-    height:100px;
-
+    height:200px;
+    vertical-align:top;
 }
 
 
