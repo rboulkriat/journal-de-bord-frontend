@@ -1,5 +1,6 @@
 <template>
-    <div class="contact-page">
+  <div class ="background-contact">
+  <div class="contact-page">
       <h1 class="title">Nous Contacter</h1>
       <p class="description">
         Une question, un avis ou simplement envie de nous écrire ? Remplissez le formulaire ci-dessous.
@@ -50,7 +51,8 @@
         <button type="submit" class="btn-submit">Envoyer</button>
       </form>
     </div>
-  </template>
+  </div>
+</template>
   
   <script>
   import '@/assets/contact.css';
