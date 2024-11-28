@@ -24,6 +24,7 @@ const showDeleteAccountModal = ref(false);
 
 const handleChangeName = () => {
   showPasswordModal.value = true;
+
 };
 
 const confirmChangeName = () => {
@@ -123,7 +124,7 @@ const confirmDeleteAccount = () => {
           placeholder="Entrez votre nouveau nom d'utilisateur" 
         />
         <span v-else>{{ currentUserName }}</span>
-        <button class ="settings-button" v-if="editName" @click="handleChangeName">
+        <button class ="settings-button" v-if="editName" @click="handleChangeName ">
           <img src="@/assets/modify.png" alt="Paramètre" class="button-icon" />
           Modifier</button>
         <button class ="settings-button" v-else @click="editName = true">
@@ -175,24 +176,33 @@ const confirmDeleteAccount = () => {
 
         <!-- LES POP UPS DE CONFIRMATION -->
 
-    <!-- Modal pour confirmation de suppression de compte -->
-    <div v-if="showDeleteAccountModal" class="modal">
+     <!-- Modal pour confirmation de suppression de compte -->
+     <div v-if="showDeleteAccountModal" class="modal">
       <div class="modal-content">
         <h3>Entrez votre mot de passe pour supprimer votre compte</h3>
         <input type="password" v-model="currentPasswordInput" placeholder="Mot de passe actuel" />
-        <button class ="settings-button" @click="confirmDeleteAccount">Confirmer la suppression</button>
-        <button class ="settings-button" @click="showDeleteAccountModal = false">Annuler</button>
+        <button @click="confirmDeleteAccount">Confirmer la suppression</button>
+        <button @click="showDeleteAccountModal = false">Annuler</button>
       </div>
     </div>
 
+    <!-- Modal pour changer le username -->
+    <div v-if="showPasswordModal" class="modal">
+      <div class="modal-content">
+        <h3>Entrez votre mot de passe actuel</h3>
+        <input type="password" v-model="currentPasswordInput" placeholder="Mot de passe actuel" />
+        <button @click="confirmChangeName">Confirmer</button>
+        <button @click="showPasswordModal = false">Annuler</button>
+      </div>
+    </div>
 
     <!-- Modal pour changement d'email -->
     <div v-if="showEmailPasswordModal" class="modal">
       <div class="modal-content">
         <h3>Entrez votre mot de passe actuel pour changer l'email</h3>
         <input type="password" v-model="currentPasswordInput" placeholder="Mot de passe actuel" />
-        <button class ="settings-button" @click="confirmChangeEmail">Confirmer</button>
-        <button class ="settings-button" @click="showEmailPasswordModal = false">Annuler</button>
+        <button @click="confirmChangeEmail">Confirmer</button>
+        <button @click="showEmailPasswordModal = false">Annuler</button>
       </div>
     </div>
 
@@ -201,8 +211,8 @@ const confirmDeleteAccount = () => {
       <div class="modal-content">
         <h3>Entrez votre mot de passe actuel</h3>
         <input type="password" v-model="currentPasswordInput" placeholder="Mot de passe actuel" />
-        <button class ="settings-button" @click="confirmChangePassword">Confirmer</button>
-        <button class ="settings-button" @click="showPasswordChangeModal = false">Annuler</button>
+        <button @click="confirmChangePassword">Confirmer</button>
+        <button @click="showPasswordChangeModal = false">Annuler</button>
       </div>
     </div>
   </section>
