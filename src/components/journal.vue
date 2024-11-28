@@ -2,27 +2,33 @@
   <div id="journal">
     <h1 class="titre-principal">Journal de Bord</h1>
 
-  
+    <!-- Section pour ajouter un nouveau secret -->
     <div class="carnet">
       <h2 class="sous-titre">Ajouter un secret</h2>
+      <!-- Champ pour le titre -->
       <input
           class="champ-titre"
           v-model="nouveauTitre"
           placeholder="Titre du secret..."
       />
+      <!-- Champ pour le message -->
       <input
           class="champ-message"
           v-model="nouveauMessage"
           placeholder="Écris un secret..."
       />
+      <!-- Bouton pour ajouter un message -->
       <button class="bouton-ajouter" @click="ajouterMessage">Ajouter</button>
     </div>
+
+    <!-- Section pour afficher les secrets -->
     <div class="carnet">
       <h2 class="sous-titre">Mes secrets</h2>
       <div class="page">
         <ul class="liste-secrets">
           <li class="element-secret" v-for="(message, index) in messages" :key="index">
             <h3 class="titre-secret">{{ message.titre }}</h3>
+            <!-- Bouton pour afficher/masquer le texte -->
             <button class="bouton-afficher" @click="afficherMessage(index)">
               {{ message.affiche ? 'Masquer' : 'Afficher' }}
             </button>
