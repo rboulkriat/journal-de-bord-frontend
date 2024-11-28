@@ -5,7 +5,6 @@ import '@fortawesome/fontawesome-free/css/all.css';
 // Vérification de l'état connecté depuis localStorage
 const isAuthenticated = ref(localStorage.getItem("isAuthenticated") === "true");
 const userName = ref(localStorage.getItem("userName") || "");
-
 // Fonction pour se déconnecter
 const logout = () => {
   // Supprimez les données de connexion du localStorage
