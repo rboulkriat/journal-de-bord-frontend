@@ -6,6 +6,7 @@ import Journal from '../components/journal.vue';
 import About from '../components/aPropos.vue';
 import Dashboard from '../components/Dashboard.vue';
 
+
 const routes = [
     {
         path: '/',
@@ -23,11 +24,6 @@ const routes = [
         component: Inscription,
     },
     {
-        path: '/journal',
-        name: 'Journal',
-        component: Journal,
-    },
-    {
         path: '/about',
         name: 'About',
         component: About,
@@ -37,7 +33,11 @@ const routes = [
         name: 'Dashboard',
         component: Dashboard,
     },
-
+    {
+        path: '/files',
+        name: 'Journal',
+        component: Journal,
+    },
 ];
 
 

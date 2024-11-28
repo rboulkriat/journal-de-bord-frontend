@@ -1,0 +1,458 @@
+/* Global reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout principal */
+/* Layout principal */
+.dashboard {
+    display: flex;
+    width: 100%; /* Prend toute la largeur */
+    height: 100vh; /* Prend toute la hauteur */
+    overflow: hidden;
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+/* Barre latérale */
+.sidebar {
+    background-color: #f4f4f4;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Prend toute la hauteur */
+    display: flex;
+    flex-direction: column; /* Colonne pour une meilleure organisation */
+    justify-content: space-between; /* Espace entre le haut et le bas */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+/* Titre centré et souligné */
+.sidebar h2 {
+    font-size: 22px;
+    color: #ef6d99;
+    margin-bottom: 20px;
+    text-align: center; /* Centre le texte */
+    text-transform: uppercase; /* Texte en majuscules */
+    letter-spacing: 1px; /* Espacement des lettres */
+    border-bottom: 2px solid rgb(246, 110, 157); /* Ligne fine sous le titre */
+    padding-bottom: 10px;
+}
+
+/* Liste des éléments du menu */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1; /* Prend tout l'espace disponible */
+}
+
+/* Items de la liste */
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a, .sidebar ul li button {
+    text-decoration: none;
+    color: #f46999;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    transition: background 0.3s, color 0.3s; /* Animation pour un effet de survol */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.sidebar ul li a:hover, .sidebar ul li button:hover {
+    background-color: rgba(246, 103, 152, 0.62); /* Fond gris clair au survol */
+    color: #f8f6f6;
+}
+
+/* Section inférieure pour une disposition élégante */
+.sidebar .bottom-section {
+    display: flex;
+    flex-direction: column; /* Disposition en colonne */
+    gap: 15px; /* Espacement entre les éléments */
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Ligne de séparation avec le reste */
+}
+
+/* Boutons ou liens dans la section inférieure */
+.sidebar .bottom-section button {
+    text-decoration: none;
+    color: white;
+    background-color: #f1a5bf; /* Couleur douce pour le fond */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background 0.3s ease;
+
+}
+
+.sidebar .bottom-section button:hover {
+    background-color: #e693ad; /* Couleur plus foncée au survol */
+}
+
+/* Exemple d'espacement des boutons ou liens */
+.sidebar .bottom-section button:first-child {
+    margin-top: 10px;
+}
+
+/* Contenu principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* En-tête */
+.dashboard-header {
+    background-color: #f6afc7;
+    color: rgba(12, 12, 12, 0.66);
+    text-align: center;
+    padding: 20px;
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+    border-bottom: black solid 1.5px;
+}
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Corps du tableau de bord */
+.dashboard-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /*background-image: url('../assets/bk3.jpg');;*/
+    background-color: #fad4e1;
+}
+
+
+/* Section des statistiques */
+.stats-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stats-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+}
+
+.stat-item {
+    margin: 0 20px;
+}
+
+.stat-item h3 {
+    font-size: 18px;
+    color: #555;
+}
+
+.stat-item p {
+    font-size: 24px;
+    color: #f1a5bf;
+    font-weight: bold;
+}
+
+/* Section des graphiques */
+.charts-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.charts-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* S'adapte à la taille de l'écran */
+    gap: 20px;
+}
+
+.chart-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+/* Vue non connectée */
+.not-authenticated {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Section avec une image de fond */
+.bk-section {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url('../assets/bk.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.bk-section .overlay1 {
+    /*font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+    color: #372311;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60px; /* Place le rectangle en haut */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Recentre par rapport à l'axe X */
+    width: 900px; /* Largeur du grand rectangle */
+    height: 180px; /* Hauteur du grand rectangle */
+    background-color: rgba(207, 150, 109, 0.58); /* Couleur avec transparence */
+}
+
+.bk-section h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.bk-section p {
+    font-size: 18px;
+
+}
+
+/* Section d'explication */
+/* Section divisée en deux colonnes */
+.split-section {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Espace entre les colonnes */
+    align-items: center; /* Aligne verticalement les colonnes */
+    padding: 40px 20px;
+    gap: 20px; /* Espacement entre les colonnes */
+    background-color: #f9f9f9; /* Couleur de fond douce */
+}
+
+/* Colonne gauche */
+.split-left {
+    flex: 1; /* Prend 50% de la largeur */
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+.split-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #573114;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+.split-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #915236;
+    margin-bottom: 20px;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+.split-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.split-left ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+/* Colonne droite */
+.split-right {
+    flex: 1; /* Prend 50% de la largeur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.split-right img {
+    max-width: 100%; /* L'image s'adapte à la largeur de la colonne */
+    height: auto; /* Conserve les proportions */
+    border-radius: 10px; /* Coins arrondis pour une touche esthétique */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* section explication 2 */
+/* Section divisée en deux colonnes */
+.split-section2 {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Espace entre les colonnes */
+    align-items: center; /* Aligne verticalement les colonnes */
+    padding: 40px 20px;
+    gap: 20px; /* Espacement entre les colonnes */
+    background-color: #f9f9f9; /* Couleur de fond douce */
+}
+
+/* Colonne gauche (image) */
+.split-left2 {
+    flex: 1; /* Prend 50% de la largeur */
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+}
+
+.split-left2 img {
+    max-width: 100%; /* L'image s'adapte à la largeur de la colonne */
+    height: auto; /* Conserve les proportions */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Colonne droite (texte) */
+.split-right2 {
+    flex: 1; /* Prend 50% de la largeur */
+    padding-left: 20px; /* Espacement interne à gauche */
+}
+
+.split-right2 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #573114;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+.split-right2 p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #915236;
+    margin-bottom: 20px;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+/* Section des boutons d'action */
+.actions-section {
+    position: relative; /* Nécessaire pour l'overlay */
+    background-image: url('../assets/bk.jpg'); /* Remplacez par le chemin réel de votre image */
+    background-size: cover; /* L'image couvre toute la section */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image */
+    width: 100%; /* Assure que la section prend toute la largeur */
+    height: 300px; /* Prend toute la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    color: white;
+    text-align: center;
+}
+
+/* Overlay sombre pour lisibilité */
+.actions-section .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5); /* Couche sombre transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* Titre et texte */
+.actions-section h2 {
+    font-size: 36px;
+    margin-bottom: 1px;
+    color: #573114;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+.actions-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #915236;
+    font-style: italic; /* Mettre le texte en italique */
+    font-family: "Georgia", "Times New Roman", serif; /* Une police douce et élégante */
+}
+
+/* Boutons */
+.actions .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #915236;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.actions .btn:hover {
+    background-color: #573114;
+}
+
+
+.hearts {
+    display: flex;
+    justify-content: center; /* Centre les cœurs horizontalement */
+    gap: 10px; /* Espace entre les cœurs */
+    font-size: 24px; /* Taille des cœurs */
+    color: #814727; /* Couleur rose */
+}
+
+.hearts span {
+    animation: pulse 1.5s infinite; /* Animation pulsante */
+}
+
+/* Animation de battement */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
