@@ -72,6 +72,38 @@ const goToLogin = () => {
       </div>
     </section>
 
+      <!-- Section Équipe -->
+      <section class="about-team">
+      <div class="team-content">
+        <h2>Notre Équipe</h2>
+        <p>
+          Derrière Confidelle se cache une équipe passionnée d'experts en design, développement et expérience utilisateur.
+        </p>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="../assets/pdpRabab.png" alt="Membre 1" />
+            <h3>Rabab Boulkriat</h3>
+            <p>Développeuse Front-End</p>
+          </div>
+          <div class="team-member">
+            <img src="../assets/pdpFiona.png" alt="Membre 2" />
+            <h3>Fiona Borgazzi</h3>
+            <p>Développeuse Front-End</p>
+          </div>
+          <div class="team-member">
+            <img src="../assets/pdpCaroline.png" alt="Membre 3" />
+            <h3>Caroline Zheng</h3>
+            <p>Développeuse Front-End</p>
+          </div>
+          <div class="team-member">
+            <img src="../assets/pdpSofia.png" alt="Membre 4" />
+            <h3>Sofia Lopes</h3>
+            <p>Développeuse Front-End</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section Contact -->
     <section class="about-section contact-section">
       <div class="section-content">
