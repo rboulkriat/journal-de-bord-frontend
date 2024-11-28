@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .modal-content {
     background-color: #f8d6e7;
     padding: 20px;
@@ -17,7 +17,7 @@
     text-align: center;
     width: 300px;
   }
-  
+
   .modal-content input {
     width: 100%;
     padding: 10px;
@@ -26,7 +26,7 @@
     border-radius: 5px;
     box-sizing: border-box;
   }
-  
+
   .modal-content button {
     padding: 10px;
     margin: 5px;
@@ -36,7 +36,7 @@
     cursor: pointer;
     border-radius: 5px;
   }
-  
+
   .modal-content button:hover {
     background-color: #ff3385;
   }
@@ -67,21 +67,21 @@
     color: #d5064e;
     margin-bottom: 20px;
   }
-  
+
   .form-group {
     margin-bottom: 20px;
   }
-  
+
   label {
     display: block;
     margin-bottom: 5px;
   }
-  
+
   input, span {
     display: block;
     margin-bottom: 10px;
   }
-  
+
   button {
     padding: 10px 15px;
     border: none;
@@ -90,11 +90,11 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   button:hover {
     background-color: #f3cac6;
   }
-  
+
   p {
     text-align: center;
     color: rgba(51, 51, 51, 0.85);
@@ -102,5 +102,5 @@
   .delete-account-btn{
     background-color: #ff3385;
     color: rgba(244, 228, 228, 0.85);
-  
+
   }

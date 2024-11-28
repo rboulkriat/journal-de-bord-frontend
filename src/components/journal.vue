@@ -1,31 +1,50 @@
 <template>
-  <div id="app">
-    <h1>Journal de Bord</h1>
-    <div class="book">
-    <!-- Entrée pour le titre -->
-    <input class="titre" v-model="nouveauTitre" placeholder="Titre du secret..." />
-    <!-- Entrée pour le message -->
-    <input class="message" v-model="nouveauMessage" placeholder="Écris un secret..." />
-    
-    <button @click="ajouterMessage">Ajouter</button>
-  </div>
-    <div class="book">
-      <h3>Mes secrets</h3>
+  <div id="journal">
+    <h1 class="titre-principal">Journal de Bord</h1>
+
+    <!-- Section pour ajouter un nouveau secret -->
+    <div class="carnet">
+      <h2 class="sous-titre">Ajouter un secret</h2>
+      <!-- Champ pour le titre -->
+      <input
+          class="champ-titre"
+          v-model="nouveauTitre"
+          placeholder="Titre du secret..."
+      />
+      <!-- Champ pour le message -->
+      <input
+          class="champ-message"
+          v-model="nouveauMessage"
+          placeholder="Écris un secret..."
+      />
+      <!-- Bouton pour ajouter un message -->
+      <button class="bouton-ajouter" @click="ajouterMessage">Ajouter</button>
+    </div>
+
+    <!-- Section pour afficher les secrets -->
+    <div class="carnet">
+      <h2 class="sous-titre">Mes secrets</h2>
       <div class="page">
-        <ul>
-          <li v-for="(message, index) in messages" :key="index">
-            <strong>{{ message.titre }}</strong>
-            <button @click="afficherMessage(index)">
+        <ul class="liste-secrets">
+          <li class="element-secret" v-for="(message, index) in messages" :key="index">
+            <h3 class="titre-secret">{{ message.titre }}</h3>
+            <!-- Bouton pour afficher/masquer le texte -->
+            <button class="bouton-afficher" @click="afficherMessage(index)">
               {{ message.affiche ? 'Masquer' : 'Afficher' }}
             </button>
+            <!-- Texte du message -->
             <p v-if="message.affiche">{{ message.texte }}</p>
-            <button @click="supprimerMessage(index)">Supprimer</button>
+            <!-- Bouton pour supprimer un message -->
+            <button class="bouton-supprimer" @click="supprimerMessage(index)">
+              Supprimer
+            </button>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
