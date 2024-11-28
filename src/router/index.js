@@ -6,6 +6,7 @@ import Journal from '../components/journal.vue';
 import About from '../components/aPropos.vue';
 import Dashboard from '../components/Dashboard.vue';
 import Parametre from '../components/Parametre.vue';
+import Contact from '@/components/Contact.vue';
 
 
 const routes = [
@@ -43,6 +44,11 @@ const routes = [
         path: '/settings',
         name: 'Parametre',
         component: Parametre,
+    },
+    {
+        path: '/contact',
+        name: 'Contatc',
+        component: Contact,
     },
 
     
