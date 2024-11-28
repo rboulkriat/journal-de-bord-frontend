@@ -79,7 +79,6 @@ const logout = () => {
     <div class="footer-logo">Confidelle</div>
     <div class="footer-links">
       <router-link to="/about">À propos</router-link>
-      <router-link to="/services">Services</router-link>
       <router-link to="/contact">Contact</router-link>
       <router-link to="/privacy">Politique de confidentialité</router-link>
     </div>

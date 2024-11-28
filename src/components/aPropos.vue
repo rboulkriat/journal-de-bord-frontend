@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const goToLogin = () => {
-  router.push('/settings');
+  router.push('/contact');
 };
 </script>
 
