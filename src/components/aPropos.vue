@@ -82,22 +82,22 @@ const goToLogin = () => {
         <div class="team-grid">
           <div class="team-member">
             <img src="../assets/pdpRabab.png" alt="Membre 1" />
-            <h3>Rabab Boulkriat</h3>
+            <h3>Rabab BOULKRIAT</h3>
             <p>Développeuse Front-End</p>
           </div>
           <div class="team-member">
             <img src="../assets/pdpFiona.png" alt="Membre 2" />
-            <h3>Fiona Borgazzi</h3>
+            <h3>Fiona BORGAZZI</h3>
             <p>Développeuse Front-End</p>
           </div>
           <div class="team-member">
             <img src="../assets/pdpCaroline.png" alt="Membre 3" />
-            <h3>Caroline Zheng</h3>
+            <h3>Caroline ZHENG</h3>
             <p>Développeuse Front-End</p>
           </div>
           <div class="team-member">
             <img src="../assets/pdpSofia.png" alt="Membre 4" />
-            <h3>Sofia Lopes</h3>
+            <h3>Sofia LOPES</h3>
             <p>Développeuse Front-End</p>
           </div>
         </div>
