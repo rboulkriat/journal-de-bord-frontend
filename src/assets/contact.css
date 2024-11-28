@@ -1,10 +1,19 @@
-
+.background-contact{
+  background-image: url("../assets/bk3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .contact-page {
   max-width: 600px;
   margin: auto;
   padding: 20px;
-  background: #fff7f7;
+  background: rgba(255, 247, 247, 0.76);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -13,12 +22,14 @@
   text-align: center;
   font-size: 24px;
   color: #d46a6a;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
 .description {
   text-align: center;
   margin-bottom: 20px;
   color: #555;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
 .contact-form {
@@ -39,6 +50,7 @@ label {
 
 input,
 textarea {
+  font-family: "Georgia", "Times New Roman", serif;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -60,6 +72,7 @@ textarea {
 }
 
 .btn-submit {
+  font-family: "Georgia", "Times New Roman", serif;
   padding: 10px 20px;
   background: #d46a6a;
   color: #fff;
