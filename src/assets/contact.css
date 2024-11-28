@@ -1,0 +1,95 @@
+.background-contact{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8d6e1;
+}
+
+.contact-page {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(253, 238, 238, 0.73);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgb(170, 7, 63);
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  color: #d36464;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+input,
+textarea {
+  font-family: "Georgia", "Times New Roman", serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+.is-invalid {
+  border-color: #d46a6a;
+}
+
+.error-message {
+  font-size: 12px;
+  color: #d46a6a;
+  margin-top: 5px;
+}
+
+.btn-submit {
+  font-family: "Georgia", "Times New Roman", serif;
+  padding: 10px 20px;
+  background: #f480a7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: #f45a90;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+  }

@@ -2,7 +2,8 @@
 #journal {
   text-align: center;
   font-family: 'Georgia', serif;
-  background-color: #f4f1ea;
+  /*background-image: url('../assets/bk5.jpg');*/
+  background-color: #f8dde6;
   padding: 20px;
 }
 
@@ -121,6 +122,7 @@
 }
 
 .titre-secret {
+
   color: #8b4513;
   font-family: 'Courier New', monospace;
   font-size: 1.5rem;

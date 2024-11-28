@@ -30,10 +30,10 @@ const logout = () => {
 
       <!-- Icônes sociales -->
       <div class="social-icons">
-        <a href="https://instagram.com" target="_blank">
+        <a href="https://www.instagram.com/confidelle.pro/" target="_blank">
           <img src="./assets/logo/inst.png" alt="Instagram" />
         </a>
-        <a href="https://facebook.com" target="_blank">
+        <a href="https://www.facebook.com/profile.php?id=61569785305519" target="_blank">
           <img src="./assets/logo/fb.png" alt="Facebook" />
         </a>
         <a href="mailto:example@example.com">
@@ -79,13 +79,12 @@ const logout = () => {
     <div class="footer-logo">Confidelle</div>
     <div class="footer-links">
       <router-link to="/about">À propos</router-link>
-      <router-link to="/services">Services</router-link>
       <router-link to="/contact">Contact</router-link>
       <router-link to="/privacy">Politique de confidentialité</router-link>
     </div>
     <div class="footer-socials">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61569785305519" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/confidelle.pro/" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
 </template>
