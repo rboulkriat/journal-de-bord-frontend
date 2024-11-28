@@ -5,6 +5,7 @@ import Inscription from '../components/inscription.vue';
 import Journal from '../components/journal.vue';
 import About from '../components/aPropos.vue';
 import Dashboard from '../components/Dashboard.vue';
+import Parametre from '../components/Parametre.vue';
 
 
 const routes = [
@@ -38,6 +39,13 @@ const routes = [
         name: 'Journal',
         component: Journal,
     },
+    {
+        path: '/settings',
+        name: 'Parametre',
+        component: Parametre,
+    },
+
+    
 ];
 
 
