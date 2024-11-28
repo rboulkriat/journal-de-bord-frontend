@@ -90,10 +90,9 @@ span {
 }
 .settings-button {
     color: rgb(227, 120, 120);
-
 }
 
-.settings-button button:hover {
+.section-settings button:hover {
     background-color: #f3cac6;
 }
 
@@ -107,6 +106,12 @@ span {
     color: rgba(255, 255, 255, 0.85);
 
 }
+#delete-account-btn:hover {
+    background-color: #f36fa4;
+    color: rgba(255, 255, 255, 0.85);
+
+}
+
 .icon {
     width: 70px;
     height: 70px;
