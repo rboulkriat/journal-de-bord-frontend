@@ -108,7 +108,7 @@ const confirmDeleteAccount = () => {
 </script>
 
 <template>
-  <section>
+  <section class="section-settings">
     <div class="settings-container">
       <h2>Paramètres du compte</h2>
 

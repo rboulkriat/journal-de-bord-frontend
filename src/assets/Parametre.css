@@ -41,7 +41,7 @@
     background-color: #ff3385;
   }
   
-  section {
+  .section-settings {
     background-image: url("../assets/bk4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
