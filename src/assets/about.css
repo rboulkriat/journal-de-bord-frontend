@@ -179,9 +179,74 @@
     margin-top: 20px;
 }
 
-.contact-button:hover {
-    background-color: #a0324e;
-    transform: translateY(-3px);
+/* Section Équipe */
+.about-team {
+    padding: 60px 20px;
+    background: #e9f7ff; /* Bleu clair */
+    border: 1px solid #a2d2ff; /* Bleu pastel */
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-team h2 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    color: #5c3b28; /* Marron doux */
+    margin-bottom: 20px;
+}
+
+.about-team p {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 16px;
+    color: #5c3b28;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Grille pour les membres de l'équipe */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustable pour s'adapter à l'écran */
+    gap: 30px; /* Espace entre les colonnes */
+    justify-content: center;
+}
+
+.team-member {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Effet de survol */
+}
+
+/* Image du membre */
+.team-member img {
+    width: 150px; /* Plus grande taille d'image */
+    height: 150px;
+    border-radius: 50%; /* Cercle pour l'image */
+    object-fit: cover; /* Adapter l'image sans déformation */
+    margin-bottom: 15px;
+}
+
+/* Nom du membre */
+.team-member h3 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 20px;
+    color: #5c3b28; /* Marron doux */
+    margin-bottom: 10px;
+}
+
+/* Description du rôle */
+.team-member p {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 14px;
+    color: #6d6d6d;
 }
 
 /* Responsive Design */
@@ -196,5 +261,9 @@
 
     .contact-button {
         width: 100%; /* Bouton qui prend toute la largeur sur mobile */
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
     }
 }
