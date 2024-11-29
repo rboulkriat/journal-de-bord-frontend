@@ -1,7 +1,3 @@
-<script setup>
-
-import '../assets/politiqueConfidentialite.css';
-</script>
 
 
 <template>
@@ -91,4 +87,6 @@ import '../assets/politiqueConfidentialite.css';
     </section>
   </div>
 </template>
+
+<style src="../assets/politiqueConfidentialite.css"></style>
 

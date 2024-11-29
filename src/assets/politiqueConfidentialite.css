@@ -1,75 +1,86 @@
+/* Conteneur principal */
 .privacy-policy-container {
-    font-family: "Arial", sans-serif;
-    color: #333;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .policy-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .policy-header h1 {
-    font-size: 36px;
-    color: #2c3e50;
-  }
-  
-  .policy-header p {
-    font-size: 18px;
-    color: #7f8c8d;
-  }
-  
-  .policy-section {
-    margin-bottom: 30px;
-  }
-  
-  .policy-section h2 {
-    font-size: 28px;
-    color: #2980b9;
-    margin-bottom: 15px;
-  }
-  
-  .policy-section p {
-    font-size: 16px;
-    color: #34495e;
-    line-height: 1.6;
-  }
-  
-  .policy-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
-  }
-  
-  .policy-section a {
-    color: #2980b9;
-    text-decoration: none;
-  }
-  
-  .policy-section a:hover {
-    text-decoration: underline;
-  }
-  
-  .contact-section a {
-    font-weight: bold;
-  }
-  
-  @media (max-width: 768px) {
-    .privacy-policy-container {
-      padding: 10px;
-    }
-  
-    .policy-header h1 {
-      font-size: 28px;
-    }
-  
-    .policy-section h2 {
-      font-size: 24px;
-    }
-  
-    .policy-section p,
-    .policy-section ul {
-      font-size: 14px;
-    }
-  }
+  font-family: 'Arial', sans-serif;
+  color: #4a4a4a; /* Gris doux */
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fafafa; /* Blanc cassé pastel */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* En-tête de la politique */
+.policy-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.policy-header h1 {
+  font-size: 2.5em;
+  color: #6a8caf; /* Bleu pastel */
+}
+
+.policy-header p {
+  font-size: 1.2em;
+  color: #9ab3d1; /* Bleu gris pastel */
+}
+
+/* Sections de la politique */
+.policy-section {
+  margin-bottom: 30px;
+}
+
+.policy-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #6f9d8d; /* Vert pastel */
+  border-bottom: 2px solid #b0d7ce; /* Vert clair pastel */
+  padding-bottom: 5px;
+}
+
+.policy-section p {
+  margin-bottom: 15px;
+  color: #616161; /* Gris clair */
+}
+
+/* Listes */
+.policy-section ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.policy-section ul li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+  color: #7c8c8d; /* Gris bleu pastel */
+}
+
+/* Liens */
+.policy-section a {
+  color: #d892a4; /* Rose pastel */
+  text-decoration: none;
+}
+
+.policy-section a:hover {
+  text-decoration: underline;
+  color: #e0a6b2; /* Rose pastel clair */
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #f4f8f9; /* Bleu très clair pastel */
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #d0e4e5; /* Bleu gris clair */
+}
+
+.contact-section a {
+  font-weight: bold;
+  color: #9f88b5; /* Lavande pastel */
+}
+
+.contact-section a:hover {
+  color: #b9a2c7; /* Lavande clair pastel */
+}
